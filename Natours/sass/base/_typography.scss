@@ -60,7 +60,7 @@
 .paragraph {
   font-size: $default-font-size;
   
-  &:not(:last-of-type){
+  &:not(:last-child){
     margin-bottom: 3rem;
   }
 }
