@@ -102,6 +102,12 @@ body {
 .u-margin-bottom-large {
   margin-bottom: 8rem; }
 
+.u-margin-top-large {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -128,6 +134,12 @@ body {
   color: #777; }
   .btn_type_white::after {
     background-color: #fff; }
+
+.btn_type_green {
+  background-color: #55c57a;
+  color: #fff; }
+  .btn_type_green::after {
+    background-color: #28b485; }
 
 .btn::after {
   content: "";
@@ -186,8 +198,8 @@ body {
       width: 65%;
       transform: scale(1.1) translateY(-1rem);
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-      border: 10px solid #28b485;
-      padding: 1rem;
+      outline: 1rem solid #28b485;
+      outline-offset: 2rem;
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
@@ -216,7 +228,8 @@ body {
   position: relative;
   perspective: 150rem;
   -moz-perspective: 150rem;
-  -webkit-perspective: 150rem; }
+  -webkit-perspective: 150rem;
+  transform-style: preserve-3d; }
   .card__side {
     height: 52rem;
     transition: all .8s;
@@ -227,7 +240,6 @@ body {
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    transform-style: preserve-3d;
     overflow: hidden; }
     .card__side_type_face {
       background-color: #fff; }
@@ -367,5 +379,5 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -12vh; }
