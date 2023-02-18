@@ -198,8 +198,8 @@ body {
       width: 65%;
       transform: scale(1.1) translateY(-1rem);
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-      outline: 1rem solid #28b485;
-      outline-offset: 2rem;
+      border: 1rem solid #28b485;
+      padding: 2rem;
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
@@ -323,7 +323,7 @@ body {
   margin: 0 auto;
   transform: skewX(-12deg);
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 6rem;
   padding-left: 9rem;
@@ -334,13 +334,46 @@ body {
     float: left;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-2rem) skewX(12deg); }
+    transform: translateX(-2rem) skewX(12deg);
+    position: relative; }
   .story__image {
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    transform: scale(1.4);
+    transition: all 0.3s; }
   .story__text {
     transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.7rem;
+    opacity: 0;
+    transition: all 0.4s ease-in-out; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__image {
+    filter: blur(3px);
+    transform: scale(1); }
+
+.bg-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: opacity(0.15);
+  z-index: -1; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 .row {
   max-width: 114rem;
@@ -407,5 +440,16 @@ body {
   margin-top: -12vh; }
 
 .section-stories {
-  background-color: #f7f7f7;
+  position: relative;
   padding: 15rem 0; }
+
+.section-book {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+  padding: 15rem 0; }
+
+.book {
+  background-image: url(../img/nat-10.jpg);
+  background-size: 100%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  height: 50rem; }
