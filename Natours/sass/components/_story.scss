@@ -1,0 +1,21 @@
+﻿.story {
+  width: 75%;
+  margin: 0 auto;
+  // clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  transform: skewX(-10deg);
+  box-shadow: 0 3rem 6rem rgba($color-black, .2);
+  background-color: rgba($color-white, 0.8);
+  border-radius: 3px;
+  padding: 6rem;
+  font-size: $default-font-size;
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &__image {
+    height: 20rem;
+    clip-path:circle(10rem);
+    float: left;
+  }
+}
