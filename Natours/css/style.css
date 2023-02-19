@@ -102,6 +102,12 @@ body {
 .u-margin-bottom-large {
   margin-bottom: 8rem; }
 
+.u-margin-top-small {
+  margin-top: 1.5rem; }
+
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
 .u-margin-top-large {
   margin-top: 8rem; }
 
@@ -120,13 +126,14 @@ body {
   border-bottom: 3px solid transparent;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.5);
-  color: inherit; }
+  color: inherit;
+  transition: all 0.3s; }
   .form__input:focus {
     outline: none;
     border-bottom: 3px solid #55c57a;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
-  .form__input:invalid {
-    border-bottom: 3px solid #ff7730; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #ff7730; }
   .form__input::placeholder {
     color: #999; }
 
@@ -146,7 +153,46 @@ body {
   visibility: hidden;
   transform: translateY(-4rem); }
 
-.btn:link, .btn:visited {
+.form__radio__group {
+  display: inline-block;
+  width: 49%; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  display: block;
+  border-radius: 50%;
+  border: 5px solid #55c57a;
+  position: absolute;
+  top: -4px;
+  left: 0; }
+  .form__radio-button::after {
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    display: block;
+    border-radius: 50%;
+    background-color: #55c57a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -154,7 +200,9 @@ body {
   border-radius: 10rem;
   transition: all 0.2s ease-in-out;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -163,7 +211,8 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
 
-.btn:active {
+.btn:active, .btn:focus {
+  outline: none;
   transform: translate(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
@@ -177,7 +226,7 @@ body {
   background-color: #55c57a;
   color: #fff; }
   .btn_type_green::after {
-    background-color: #28b485; }
+    background-color: #55c57a; }
 
 .btn::after {
   content: "";
