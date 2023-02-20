@@ -510,7 +510,8 @@ body {
     height: 2px;
     background-color: #333;
     display: inline-block;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    transition: all .3s; }
   .navigation__icon::after, .navigation__icon::before {
     content: "";
     position: absolute;

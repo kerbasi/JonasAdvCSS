@@ -28,6 +28,7 @@
       background-color: $color-gray-dark-3;
       display: inline-block;
       box-sizing: border-box;
+      transition: all .3s;
     }
       
     &::after, &::before {
