@@ -1,3 +1,18 @@
+/*MEDIA QUERY MANAGER
+0-600 phone
+600-900 tab-port
+900-1200 tab-land
+1200-1800 is where our normal style
+1800+ big desktop
+
+&breakpoint argument choices:
+- phone
+- tab-prot
+- tab-land
+- big-desktop
+
+ORDER: base + typography -> general layout + grid -> page layout -> components
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +22,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 1200px) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 600px) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 80%; } }
 
 body {
   box-sizing: border-box;
