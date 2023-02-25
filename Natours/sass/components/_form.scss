@@ -16,6 +16,10 @@
     color: inherit;
     transition: all 0.3s;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus{
       outline: none;
       border-bottom: 3px solid $color-primary;
@@ -53,6 +57,11 @@
   &__radio__group {
     display: inline-block;
     width: 49%;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-input{

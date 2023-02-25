@@ -143,8 +143,17 @@
       background-size: 230%;
       transition: all 0.4s;
 
+      @include respond(tab-port) {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+      }
+
       & span {
         margin-right: 1rem;
+
+        @include respond(tab-port) {
+          margin-right: 0.5rem;
+        }
       }
     }
 
