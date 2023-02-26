@@ -875,7 +875,8 @@ body {
   color: #f7f7f7; }
   @media (max-width: 56.25em) {
     .footer {
-      padding: 8rem 0; } }
+      padding: 8rem 0;
+      font-size: 1.2rem; } }
   .footer__logo {
     width: 15rem;
     height: auto; }
