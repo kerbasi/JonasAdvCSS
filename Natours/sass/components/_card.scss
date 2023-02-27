@@ -144,7 +144,7 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port){
+  @media only screen and (max-width:37.5em), only screen and (hover:none) {
     height: auto;
     position: relative;
     perspective: 150rem;
