@@ -3,3 +3,41 @@
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
 }
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  position: fixed;
+  top: 4rem;
+  left: 2rem;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    transition: all 0.3s;
+  }
+
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+
+  &::after {
+    transform: translateY(1.4rem);
+  }
+
+  &:hover::before {
+    transform: translateY(-1.2rem);
+  }
+
+  &:hover::after {
+    transform: translateY(1.1rem);
+  }
+}
