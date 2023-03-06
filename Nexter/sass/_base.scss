@@ -18,6 +18,7 @@ $font-display: 'Josefin Sans', sans-serif;
 $br-largest: 75em;  //1200   1200/16=75
 $br-large: 62.5em;  //1000px
 $br-medium: 50em;   //800px
+$br-small: 37.5em;  //600px
 
 *,
 *::after, 
@@ -51,5 +52,9 @@ body {
   @media only screen and (max-width: $br-large) {
     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $br-medium) {
+    grid-template-rows: 6rem calc(100vh - 6rem);
   }
 }
